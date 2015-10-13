@@ -1,0 +1,296 @@
+/*****************************
+			MAIN
+*****************************/
+
+	html {
+		height: 100%;
+	}
+
+  body {
+  background: -webkit-linear-gradient(#003366, #228b22); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#003366, #228b22); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#003366, #228b22); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#003366, #228b22); /* Standard syntax */  
+  background-attachment: fixed; 
+	color: white;
+	font-family: 'Lakki Reddy', cursive, sans-serif;
+	text-align: center;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+h1 {
+	font-family: 'Lakki Reddy', cursive, sans-serif;
+}
+
+h2 {
+	font-family: 'Lakki Reddy', cursive, sans-serif;
+	margin: 0;
+}
+
+h3 {
+   font-family: 'Lakki Reddy', cursive, sans-serif;
+}
+
+ol {
+	float: left;
+	margin: 0;
+	text-align: left;
+}
+
+/*****************************
+			NOTEPAD BACKGROUND
+*****************************/
+
+.paper {
+  font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 6px 5px 4px 42px;
+  position: relative;
+  color: #444;
+  line-height: 20px;
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: 100% 20px;
+  -ms-background-size: 100% 20px;
+  -o-background-size: 100% 20px;
+  background-size: 100% 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 10px 10px 5px #000;
+  -moz-box-shadow: 10px 10px 5px #000;
+  box-shadow: 10px 10px 5px #000;
+  width: 30%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 400%;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #efe4e4;
+}
+
+/*****************************
+			INPUT/LINKS
+*****************************/
+
+label {
+	font-family: 'Lakki Reddy', cursive, sans-serif;
+}
+
+input {
+   border-bottom-color: #b3b3b3;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+   border-left-color: #b3b3b3;
+   border-left-style: solid;
+   border-left-width: 1px;
+   border-right-color: #b3b3b3;
+   border-right-style: solid;
+   border-right-width: 1px;
+   border-top-color: #b3b3b3;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-top-style: solid;
+   border-top-width: 1px;
+   margin: 0;
+   width: 10em;
+}
+
+input[type=submit] {
+  background: #00e5ee;
+}
+
+a {
+	color: #ccff00;
+}
+
+a:hover {
+  color: #ff8300;
+}
+
+.pop {
+  cursor: default;
+  display: none;
+  margin: 0 auto;
+}
+
+.tog {
+  cursor: default;
+  display: none;
+  margin: 0 auto;
+}
+
+.list {
+  cursor: default;
+  display: none;
+  margin: 0 auto;
+}
+
+.byebye {
+  color: #00e5ee;
+  cursor: default;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+
+.clear {
+  color: #00e5ee;
+  cursor: default;
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.listname {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+#return {
+  font-size: .8em;
+  margin: 20px;
+  width: 100px;
+}
+
+#notepad {
+  display: inline-block;
+}
+
+#notepad2 {
+  float: right;
+  margin: 0 15% 0 -40%;
+}
+
+#shoppingcart {
+  float: left;
+  margin: 0 -40% 0 15%;
+}
+
+#shoppingcart2 {
+  float: left;
+  margin: 0 -40% 0 15%;
+}
+
+#suitcase {
+  float: right;
+  margin: 0 15% 0 -40%;
+}
+
+.deletename {
+  padding-right: 10px;
+}
+
+.logout {
+  padding-left: 10px;
+}
+/*****************************
+			FOOTER
+*****************************/
+
+.social-icon {
+	height: 60px;
+	width: 60px;
+	position:relative;
+	margin-top: 100px;
+}
+
+#twitter {
+  height: 40px;
+  width: 40px;
+  padding-bottom: 10px;
+}
+/*****************************
+			MEDIA QUERIES
+*****************************/
+
+@media (max-width: 800px) {
+	body { 
+		background: #003366;
+		font-family: arial;
+		font-size: 0.75em;
+		}
+	
+		a {
+			font-size: 0.75em;
+		}
+		
+	img {
+		height: 60px;
+		width: 60px;
+	}
+	
+	input {
+		margin: 5px;
+		width: 7em;
+		height: 1em;
+	}
+	
+	input[type=submit] {
+	   height: 1.5em;
+	}
+	
+	.paper {
+		width: 60%;
+	}
+	
+	.clear {
+		font-size: 0.75em;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	h1 {
+		font-size: 1em;
+	}
+	
+	h2 {
+		font-size: 0.9em;
+	}
+	
+	h3 {
+		font-size: 0.8em;
+	}
+	
+	p {
+		font-size: 0.75em;
+	}
+		
+	label {
+		font-family: arial;
+		font-size: 0.75em;
+	}
+	
+	#shoppingcart {
+		display: none;
+	}
+		
+	#suitcase {
+		display: none;
+	}
+	
+}
+	
