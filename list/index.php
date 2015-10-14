@@ -95,12 +95,12 @@ if (isset($_REQUEST['action'])) {
 ?>
 <body>
 	<a href="<?php echo BASE_URL; ?>" class="logout">Logout & Save</a>
-  <header>
+  <div class="top">
    <?php
     echo  '<div><span data-id=' . $userid . '>' . 
     '<h1>' . htmlspecialchars(user_name($userid)) . "'s List" . '</span>' . ' ' . '</h1>' . '</div>';?>
    <p>First select or create a list, then start adding items.</p>
-  </header>
+  </div>
   <img id="shoppingcart2" src="../img/1440454195_Shopping cart.png" width="128" height="109" alt="Shopping Cart">
 	<img id="notepad2" src="../img/1441743044_kwrite.png" width="128" height="128" alt="Notepad">
 	<div>
