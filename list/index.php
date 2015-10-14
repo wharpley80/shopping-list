@@ -90,11 +90,11 @@ if (isset($_REQUEST['action'])) {
 	}
 	
 	} else {
-	$prev = "Select";
-	
+	$prev = "Select";	
 }
 ?>
 <body>
+	<a href="<?php echo BASE_URL; ?>" class="logout">Logout & Save</a>
   <header>
    <?php
     echo  '<div><span data-id=' . $userid . '>' . 
@@ -116,7 +116,7 @@ if (isset($_REQUEST['action'])) {
 	</div>
   <form method="POST">
   <div>
-    <a href="" id="changename">Edit Name</a>
+    <a href="" id="changename">Edit Username</a>
   </div>
   <div class="tog">
     <label for="rename">Rename</label>
@@ -124,17 +124,18 @@ if (isset($_REQUEST['action'])) {
     <input type="text" name="rename" id="rename">
     <input type="submit" name="submit" id="submit" value="Rename">
 	</div>
+  </form>
 	<div>
 		<a href="" class="deletelist">Delete List</a>
 	</div>
 	<div id="info">
-  <form method="POST" accept-charset="UTF-8">
+  <form method="POST" action="" class="item-form">
 		<label for="list">Select List</label>
     <?php
     $cols = $db->prepare('SELECT DISTINCT(list) FROM grocery_item WHERE name_id = ? ORDER BY list ASC'); 
     $cols->bindParam(1,$userid);
     $cols->execute();?>
-    <select id="return" name=list >Select</option>
+    <select id="return" name="list" >Select</option>
       <option selected disabled>Select</option>
       <?php foreach ($cols as $col) { ?>
               <option value="<?php echo htmlspecialchars($col['list']); ?>" 
@@ -147,7 +148,7 @@ if (isset($_REQUEST['action'])) {
 	</div>
 	<div>
     <label for="grocery">Add Items</label>
-    <input type="hidden" name="action" value="additem">
+    <input type="hidden" name="action" value="additem"> 
     <input type="text" autofocus="autofocus" name="grocery" id="grocery">
     <input type="submit" name="submit" class="submit" id="submit" value="Add">
   </form>
@@ -188,7 +189,6 @@ if (isset($_REQUEST['action'])) {
   	</ol>
 	</div>
 	<a href="#" class="deletename">Delete My Account</a>
-  <a href="<?php echo BASE_URL; ?>" class="logout">Logout & Save</a>
 <?php
 include(ROOT_PATH . 'inc/footer.php');
 ?>

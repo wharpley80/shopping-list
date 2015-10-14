@@ -103,6 +103,33 @@ $(function() {
     }
   });
 
+ // Initialize tooltipster on item-form input/password elements
+  $('.item-form select').tooltipster({ 
+    trigger: 'custom', // default is 'hover' which is no good here
+    onlyOne: false,    // allow multiple tips to be open at a time
+    position: 'right'  // display the tips to the right of the element
+  });
+
+  $(".item-form").validate({
+    rules: {
+      list: {
+        required: true,
+      }
+    },  
+    messages: {
+      list: {
+        required: "Select List",     
+      }
+    },
+    errorPlacement: function (error, element) {
+      $(element).tooltipster('update', $(error).text());
+      $(element).tooltipster('show');
+    },
+    success: function (label, element) {
+      $(element).tooltipster('hide');
+    }
+  });
+
   // Edit Username pop-up
   $(function() {
   function deselect(j) {
