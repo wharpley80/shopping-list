@@ -10,6 +10,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	$password = hash("sha256", $password);
 	
 	if (empty($username) || empty($password)) {
+		echo "Please Complete All Fields";
 	} else {
 
 	  function username($username,$password) {
@@ -56,7 +57,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		  header ("Location: " . BASE_URL . "list/");
 		  exit();
 		} else { 
-			echo "Invalid login!!";
+			echo "Invalid Username";
 		}
 	}
 }
