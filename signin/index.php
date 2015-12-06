@@ -64,6 +64,59 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 require_once(ROOT_PATH . 'inc/header.php');
 ?>
 <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<h3 class="navbar-text pull-right">Easy List Maker</h3>
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h1>Easy List Maker</h1>
+    			<p class="lead">
+    				SignIn or SignUp and Start Making Lists. Create as many Lists as you desire. Shopping List, To Do List, 
+    				Christmas List, Packing List, etc...
+    			</p>
+    			<p class="lead">
+    				<a class="btn btn-default btn-md" href="#signIn" data-toggle="modal">Sign In</a>
+    				<a class="btn btn-default btn-md"	 href="../signup" id="newname">Start List</a>
+    			</p>
+				</div>
+				<div class="col-sm-6 hidden-xs">
+					<div class="device">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="modal fade" id="signIn">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Sign In with your Username and Password</h4>
+				</div>
+				<div class="modal-body">
+					<form class="signin-form" method="POST">
+					  <div class="form-group">
+              <label for="username">Username</label>
+					  	<input type="text" class="form-control-sm" name="username" id="username" placeholder="Username">
+					  </div>
+					  <div class="form-group">
+					    <label for="password">Password</label>
+					    <input type="password" class="form-control-sm" name="password" id="password" placeholder="Password">
+					  </div>
+					  <input type="submit" name="signin" class="signin" value="Log In">
+					  <button type="submit" class="btn btn-primary" data-dismiss="modal">Sign In</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--
   <header>
     <h1>Easy List Maker</h1>
     <p>SignIn or SignUp and Start Making Lists. <br>
@@ -85,6 +138,7 @@ require_once(ROOT_PATH . 'inc/header.php');
   <div class="newcomer">
     <a href="../signup" id="newname">New User Click Here</a>
   </div>
+-->
 <?php
 include(ROOT_PATH . 'inc/footer.php');
 ?>

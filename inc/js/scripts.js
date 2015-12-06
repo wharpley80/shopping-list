@@ -5,7 +5,7 @@ $(function() {
   $('.signin-form input[type="text"], .signin-form input[type="password"]').tooltipster({ 
     trigger: 'custom', // default is 'hover' which is no good here
     onlyOne: false,    // allow multiple tips to be open at a time
-    position: 'left'  // display the tips to the right of the element
+    position: 'right'  // display the tips to the right of the element
   });
 
   $(".signin-form").validate({

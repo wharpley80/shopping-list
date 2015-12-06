@@ -1,7 +1,10 @@
 /*****************************
 			MAIN
 *****************************/
-
+body {
+  background-color: #e8e8e8;
+}
+/*
 	html {
 		height: 100%;
 	}
@@ -10,11 +13,14 @@
     margin-top: -30px;
   }
 
+}
+/*
   body {
-  background: -webkit-linear-gradient(#003366, #228b22); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#003366, #228b22); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#003366, #228b22); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#003366, #228b22); /* Standard syntax */  
+  background: -webkit-linear-gradient(#56A0D3, #CAE1FF); /* For Safari 5.1 to 6.0 */
+ /* background: -o-linear-gradient(#56A0D3, #CAE1FF); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(#56A0D3, #CAE1FF); /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(#56A0D3, #CAE1FF); /* Standard syntax */  
+  /*
   background-attachment: fixed; 
 	color: white;
 	font-family: 'Lakki Reddy', cursive, sans-serif;
@@ -23,7 +29,8 @@
   margin: 0;
   background-repeat: no-repeat;
 }
-
+*/
+/*
 h1 {
 	font-family: 'Lakki Reddy', cursive, sans-serif;
 }
@@ -41,6 +48,68 @@ ol {
 	float: left;
 	margin: 0;
 	text-align: left;
+}
+
+/*****************************
+      NAVBAR
+*****************************/
+
+.navbar {
+  background-color: #000;
+  border-color: #000;
+}
+
+.navbar-text {
+  color: #fff;
+}
+
+/*****************************
+      JUMBOTRON
+*****************************/
+
+.jumbotron {
+  color: #fff;
+  font-weight: bold;
+  background: 
+    linear-gradient(
+      rgba(142, 109, 180, 0.95), 
+      rgba(142, 109, 180, 0.95)
+    ),
+    url('../img/6a00d83451b3d969e201538f57d22f970b-500wi.jpg') no-repeat;
+  background-size: 100%;
+  padding: 100px 100px 100px 50px;
+}
+
+.device {
+  width: 300px;
+  height: 400px;
+  background: url('../img/fVxCxjG.jpg') no-repeat;
+  background-size: 100%;
+  float: none;
+  margin: 0 auto;
+}
+
+.lead {
+  color: #c8c8c8;
+}
+
+/*****************************
+      BUTTONS
+*****************************/
+
+.btn-default {
+  background-color: rgba(0,0,0,0);
+  border-width: 2px;
+  color: #c8c8c8;
+  border-color: inherit;
+  margin-right: 15px;
+  padding: 12px 22px;
+}
+
+.btn-default:hover {
+  background-color: #fff;
+  color: #957bba;
+  border-color: #fff;
 }
 
 /*****************************
@@ -96,24 +165,24 @@ ol {
 /*****************************
 			INPUT/LINKS
 *****************************/
-
+/*
 label {
 	font-family: 'Lakki Reddy', cursive, sans-serif;
 }
 
 input {
-   border-bottom-color: #b3b3b3;
+   border-bottom-color: #778899;
    border-bottom-left-radius: 10px;
    border-bottom-right-radius: 10px;
    border-bottom-style: solid;
    border-bottom-width: 1px;
-   border-left-color: #b3b3b3;
+   border-left-color: #778899;
    border-left-style: solid;
    border-left-width: 1px;
-   border-right-color: #b3b3b3;
+   border-right-color: #778899;
    border-right-style: solid;
    border-right-width: 1px;
-   border-top-color: #b3b3b3;
+   border-top-color: #778899;
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
    border-top-style: solid;
@@ -123,15 +192,15 @@ input {
 }
 
 input[type=submit] {
-  background: #00e5ee;
+  background: #778899;
 }
 
 a {
-	color: #ccff00;
+	color: #3300FF;
 }
 
 a:hover {
-  color: #ff8300;
+  color: #000;
 }
 
 .pop {
@@ -153,14 +222,14 @@ a:hover {
 }
 
 .byebye {
-  color: #00e5ee;
+  color: #778899;
   cursor: default;
   font-size: 0.75em;
   text-decoration: none;
 }
 
 .clear {
-  color: #00e5ee;
+  color: #778899;
   cursor: default;
   font-size: 1.25em;
   margin: 0;
@@ -213,6 +282,10 @@ a:hover {
 			FOOTER
 *****************************/
 
+footer {
+  text-align: center;
+}
+
 .social-icon {
 	height: 60px;
 	width: 60px;
@@ -225,13 +298,14 @@ a:hover {
   width: 40px;
   padding-bottom: 10px;
 }
+
 /*****************************
 			MEDIA QUERIES
 *****************************/
-
+/*
 @media (max-width: 800px) {
 	body { 
-		background: #003366;
+		background: #56A0D3;
 		font-family: arial;
 		font-size: 0.75em;
 		}
