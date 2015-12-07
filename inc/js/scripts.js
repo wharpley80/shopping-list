@@ -55,7 +55,7 @@ $(function() {
   $('.signup-form input[type="text"], .signup-form input[type="password"]').tooltipster({ 
     trigger: 'custom', // default is 'hover' which is no good here
     onlyOne: false,    // allow multiple tips to be open at a time
-    position: 'left'  // display the tips to the right of the element
+    position: 'right'  // display the tips to the right of the element
   });
 
   $(".signup-form").validate({
@@ -69,12 +69,12 @@ $(function() {
           type: "POST" 
         } 
       },
-      password: {
+      'new-password': {
         required: true,
         minlength: 6
       },
       'password-confirm': {
-        equalTo: "#password"
+        equalTo: "#new-password"
       }
     },  
     messages: {
@@ -84,7 +84,7 @@ $(function() {
         maxlength: "15 Characters Max",
         remote: "This Username Already Exists"      
       },
-      password: {
+      'new-password': {
         required: "Password Required",
         minlength: "6 Characters Required"
       },

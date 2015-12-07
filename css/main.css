@@ -59,10 +59,6 @@ ol {
   border-color: #000;
 }
 
-.navbar-text {
-  color: #fff;
-}
-
 /*****************************
       JUMBOTRON
 *****************************/
@@ -72,8 +68,8 @@ ol {
   font-weight: bold;
   background: 
     linear-gradient(
-      rgba(142, 109, 180, 0.95), 
-      rgba(142, 109, 180, 0.95)
+      rgba(142, 109, 180, 0.92), 
+      rgba(142, 109, 180, 0.92)
     ),
     url('../img/6a00d83451b3d969e201538f57d22f970b-500wi.jpg') no-repeat;
   background-size: 100%;
@@ -110,6 +106,18 @@ ol {
   background-color: #fff;
   color: #957bba;
   border-color: #fff;
+}
+
+/*****************************
+      GLYPHICON
+*****************************/
+
+.glyphicon {
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  color: #6495ed;
+  /*color: #3a87ad;*/
 }
 
 /*****************************
