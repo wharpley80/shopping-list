@@ -143,7 +143,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 		</div>
 	</div>
   <div class="modal fade" id="signIn">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -152,25 +152,19 @@ require_once(ROOT_PATH . 'inc/header.php');
 				<div class="modal-body">
 					<form class="signin-form" method="POST">
 					  <div class="form-group">
-              <label for="username">Username</label>
 					  	<input type="text" class="form-control-sm" name="username" id="username" placeholder="Username">
 					  </div>
 					  <div class="form-group">
-					    <label for="password">Password</label>
 					    <input type="password" class="form-control-sm" name="password" id="password" placeholder="Password">
 					  </div>
 					  <input type="submit" name="signin" class="btn btn-primary" value="Sign In">
-					  <!--
-					  <button type="submit" class="btn btn-primary"  class="signin" data-dismiss="modal">Sign In</button>
-					-->
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
   <div class="modal fade" id="signUp">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -179,21 +173,15 @@ require_once(ROOT_PATH . 'inc/header.php');
 				<div class="modal-body">
 					<form class="signup-form" method="POST">
 					  <div class="form-group">
-              <label for="name">Username</label>
 					  	<input type="text" class="form-control-sm" name="newname" id="name" placeholder="Username">
 					  </div>
 					  <div class="form-group">
-					    <label for="new-password">Password</label>
 					    <input type="password" class="form-control-sm" name="new-password" id="new-password" placeholder="Password">
 					  </div>
             <div class="form-group">
-            	<label for="password-confirm">Password Confirm</label>
-					  	<input type="password" class="form-control-sm" name="password-confirm" id="password-confirm" placeholder="Password Confirm">
+					  	<input type="password" class="form-control-sm" name="password-confirm" id="password-confirm" placeholder="Pass Confirm">
 					  </div>
 					  <input type="submit" name="addname" class="btn btn-primary" value="Get Started">
-					  <!--
-					  <button type="submit" class="btn btn-primary"  class="addname" data-dismiss="modal">Sign Up</button>
-					-->
 					</form>
 				</div>
 			</div>
@@ -205,7 +193,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 	 			<b class="glyphicon glyphicon-user"></b>
 	 			<h2>Get Started</h2>
 			 	<p>
-			 		Create an account with a Username and Password. Then make as many lists as you want. It's quick and easy!! Takes 
+			 		Create an account with a Username and Password. Then make as many lists as you want. It's quick, easy, and FREE!! Takes 
 			 		less than a minute to get started and have your first list on it's way.
 			 	</p>
 	    </div>

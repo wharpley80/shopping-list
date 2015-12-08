@@ -94,101 +94,153 @@ if (isset($_REQUEST['action'])) {
 }
 ?>
 <body>
-	<a href="<?php echo BASE_URL; ?>" class="logout">Logout & Save</a>
-  <div class="top">
-   <?php
-    echo  '<div><span data-id=' . $userid . '>' . 
-    '<h1>' . htmlspecialchars(user_name($userid)) . "'s List" . '</span>' . ' ' . '</h1>' . '</div>';?>
-   <p>First select or create a list, then start adding items.</p>
-  </div>
-  <img id="shoppingcart2" src="../img/1440454195_Shopping cart.png" width="128" height="109" alt="Shopping Cart">
-	<img id="notepad2" src="../img/1441743044_kwrite.png" width="128" height="128" alt="Notepad">
-	<div>
-		<a href="" id="newlist">Create List</a>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<h3 class="navbar-text pull-left">Easy List Maker</h3>
+			<a href="<?php echo BASE_URL; ?>" class="navbar-text pull-right">Logout & Save</a>
+		</div>
 	</div>
-	<div class="list">
-	<form method="POST">
-		<label for="newlist">Create List</label>
-		<input type="hidden" name="action" value="newlist">
-		<input type="text" name="newlist" id="newlist">
-		<input type="submit" name="submit" id="submit" value="Add List">
-	</form>
-	</div>
-  <form method="POST">
-  <div>
-    <a href="" id="changename">Edit Username</a>
-  </div>
-  <div class="tog">
-    <label for="rename">Rename</label>
-    <input type="hidden" name="action" value="editname">
-    <input type="text" name="rename" id="rename">
-    <input type="submit" name="submit" id="submit" value="Rename">
-	</div>
-  </form>
-	<div>
-		<a href="" class="deletelist">Delete List</a>
-	</div>
-	<div id="info">
-  <form method="POST" action="" class="item-form">
-		<label for="list">Select List</label>
-    <?php
-    $cols = $db->prepare('SELECT DISTINCT(list) FROM grocery_item WHERE name_id = ? ORDER BY list ASC'); 
-    $cols->bindParam(1,$userid);
-    $cols->execute();?>
-    <select id="return" name="list" >Select</option>
-      <option selected disabled>Select</option>
-      <?php foreach ($cols as $col) { ?>
-              <option value="<?php echo htmlspecialchars($col['list']); ?>" 
-              <?php if ( $col['list'] == "$prev") echo ' selected="selected"'; ?>>
-                <?php echo htmlspecialchars($col['list']); ?></option>
-      <?php } ?>
-    </select>
-    <input type="hidden" name="action" value="list">
-    <input type="submit" name="submit" id="submit" value="Select">
-	</div>
-	<div>
-    <label for="grocery">Add Items</label>
-    <input type="hidden" name="action" value="additem"> 
-    <input type="text" autofocus="autofocus" name="grocery" id="grocery">
-    <input type="submit" name="submit" class="submit" id="submit" value="Add">
-  </form>
-  </div> 
-  <div>
-    <a href="" class="clear">Clear List</a>
-  </div>
-  <?php
-   echo  '<div><span data-lis=' . json_encode($listname) . '>' . 
-   '<h2>' . htmlspecialchars($listname) . '</span>' . ' ' . '</h2>' . '</div>';?>
-  <div class="paper">
-		<ol>
-		<?php 
+	<div class="list-page">
+	  <div class="container">
+	  	<?php
+	    	echo  '<div><span data-id=' . $userid . '>' . 
+	    	'<h1>' . htmlspecialchars(user_name($userid)) . "'s List" . '</span>' . ' ' . '</h1>' . '</div>';
+	    ?>
+	   	<p class="lead">First select or create a list. Then start adding items.</p>
+	   	<p class="lead">
+    		<a class="btn btn-default btn-sm" href="#createList" data-toggle="modal">New List</a>
+    		<a class="btn btn-default btn-sm" id="clear" href="">Clear List</a>
+    		<a class="btn btn-default btn-sm"	id="deletelist" href="">Delete List</a>
+    	</p>
+	  </div>
+	  <div class="modal fade modal" id="createList">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">Enter the name of your new List!</h4>
+					</div>
+					<div class="modal-body">
+						<form class="signin-form" method="POST">
+						  <div class="form-group">
+	              <label for="newlist">List Name</label>
+	              <input type="hidden" name="action" value="newlist">
+						  	<input type="text" class="form-control-sm" name="newlist" id="newlist" autofocus="autofocus" placeholder="List Name">
+						  </div>
+						  <input type="submit" name="signin" class="btn btn-primary" value="Start">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  <div class="modal fade modal" id="editName">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">Enter your new Username.</h4>
+					</div>
+					<div class="modal-body">
+						<form class="signin-form" method="POST">
+						  <div class="form-group">
+	              <label for="rename">Username</label>
+						  	<input type="text" class="form-control-sm" name="rename" id="rename" autofocus="autofocus" placeholder="Username">
+						  </div>
+						  <input type="submit" name="signin" class="btn btn-primary" value="Rename">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
-			// Selects items from a user's specific list, and displays them.
-			try {
-			  $rows = $db->prepare('
-					SELECT * FROM grocery_item 
-					WHERE name_id = ? 
-					AND list = ?
-					ORDER BY id ASC
-			    ');
-			  $rows->bindParam(1,$userid);
-			  $rows->bindParam(2,$listname);
-			  $rows->execute();
-			  foreach ($rows as $row) {
-			    if (!empty($row['item'])) {
-			      echo '<div class="fulllist"><span data-id=' . $row['id'] . '>' . 
-			      '<li>' . htmlspecialchars($row['item']) . "</span> " . ' ' . 
-			      '<a href="" class="byebye">Remove Item</a>' . '</li>' . '</div>' ;
-			    }
-			  }
-			} catch (Exception $e) {
-			    echo "Data was not retrieved from the database successfully.";
-			    exit;
-			}
-			?>
-  	</ol>
+    <!--
+	  <img id="shoppingcart2" src="../img/1440454195_Shopping cart.png" width="128" height="109" alt="Shopping Cart">
+		<img id="notepad2" src="../img/1441743044_kwrite.png" width="128" height="128" alt="Notepad">
+	   
+		<div>
+			<a href="" id="newlist">Create List</a>
+		</div>
+		<div class="list">
+		<form method="POST">
+			<label for="newlist">Create List</label>
+			<input type="hidden" name="action" value="newlist">
+			<input type="text" name="newlist" id="newlist">
+			<input type="submit" name="submit" id="submit" value="Add List">
+		</form>
+		</div>
+	  <form method="POST">
+	  <div>
+	    <a href="" id="changename">Edit Username</a>
+	  </div>
+	  <div class="tog">
+	    <label for="rename">Rename</label>
+	    <input type="hidden" name="action" value="editname">
+	    <input type="text" name="rename" id="rename">
+	    <input type="submit" name="submit" id="submit" value="Rename">
+		</div>
+	  </form>
+	-->
+		<div id="info">
+	  <form method="POST" action="" class="item-form">
+			<label for="list" class="my-label">Select List</label>
+	    <?php
+	    $cols = $db->prepare('SELECT DISTINCT(list) FROM grocery_item WHERE name_id = ? ORDER BY list ASC'); 
+	    $cols->bindParam(1,$userid);
+	    $cols->execute();?>
+	    <select id="return" name="list" >Select</option>
+	      <option selected disabled>Select</option>
+	      <?php foreach ($cols as $col) { ?>
+	              <option value="<?php echo htmlspecialchars($col['list']); ?>" 
+	              <?php if ( $col['list'] == "$prev") echo ' selected="selected"'; ?>>
+	                <?php echo htmlspecialchars($col['list']); ?></option>
+	      <?php } ?>
+	    </select>
+	    <input type="hidden" name="action" value="list">
+	    <input type="submit" class="btn btn-primary btn-sm" name="submit" id="submit" value="Select">
+		</div>
+		<div>
+	    <label for="grocery" class="my-label">Add Items</label>
+	    <input type="hidden" name="action" value="additem"> 
+	    <input type="text" autofocus="autofocus" name="grocery" id="grocery">
+	    <input type="submit" class="btn btn-primary btn-sm" name="submit" id="submit" value="Add">
+	  </form>
+	  </div> 
+	  <?php
+	   echo  '<div><span data-lis=' . json_encode($prev) . '>' . 
+	   '<h2 class="list-name">' . htmlspecialchars($prev) . '</span>' . ' ' . '</h2>' . '</div>';
+	  ?>
+	  <div class="paper">
+			<ol>
+				<?php 
+
+				// Selects items from a user's specific list, and displays them.
+				try {
+				  $rows = $db->prepare('
+						SELECT * FROM grocery_item 
+						WHERE name_id = ? 
+						AND list = ?
+						ORDER BY id ASC
+				    ');
+				  $rows->bindParam(1,$userid);
+				  $rows->bindParam(2,$listname);
+				  $rows->execute();
+				  foreach ($rows as $row) {
+				    if (!empty($row['item'])) {
+				      echo '<div class="fulllist"><span data-id=' . $row['id'] . '>' . 
+				      '<li>' . htmlspecialchars($row['item']) . "</span> " . ' ' . 
+				      '<a href="" class="byebye">Remove Item</a>' . '</li>' . '</div>' ;
+				    }
+				  }
+				} catch (Exception $e) {
+				    echo "Data was not retrieved from the database successfully.";
+				    exit;
+				}
+				?>
+	  	</ol>
+		</div>
+		<a class="btn btn-default btn-sm"	href="#editName" data-toggle="modal">Edit Username</a>
+		<a href="#" class="btn btn-default btn-md" id="deletename">Delete My Account</a>
 	</div>
-	<a href="#" class="deletename">Delete My Account</a>
 <?php
 include(ROOT_PATH . 'inc/footer.php');
 ?>

@@ -180,7 +180,7 @@ $.fn.slideFadeToggle = function(easing, callback) {
 };
 
   // Clears a User's entire list.
-  $('a.clear').on('click', function(event) {
+  $('a#clear').on('click', function(event) {
     event.preventDefault();
     
     if (confirm("Are you sure you want to clear your list?")) {
@@ -221,7 +221,7 @@ $.fn.slideFadeToggle = function(easing, callback) {
 
 // Deletes a Specific List.
 $(function() {
-  $('a.deletelist').on('click', function(event) {
+  $('a#deletelist').on('click', function(event) {
     event.preventDefault();
   
     if (confirm("Are you sure you want to delete this list?")) {
@@ -248,7 +248,7 @@ $(function() {
 
 // Deletes Username from list.
 $(function() {
-  $('a.deletename').on('click', function(event) {
+  $('a#deletename').on('click', function(event) {
     event.preventDefault();
   
     if (confirm("Are you sure you want to delete this shopper?")) {
