@@ -28,8 +28,8 @@ ol {
       rgba(142, 109, 180, 0.92), 
       rgba(142, 109, 180, 0.92)
     ),
-    url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') no-repeat;
-  background-size: 100% 1800px;
+    url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') repeat-y;
+  background-size: 100%;
   text-align: center;
   height: 100%;
   margin: 55px 0 0 0;
@@ -259,8 +259,8 @@ footer {
         rgba(142, 109, 180, 0.95), 
         rgba(142, 109, 180, 0.95)
       ),
-      url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') no-repeat;
-    background-size: 100% 1800px;
+      url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') repeat-y;
+    background-size: 100%;
   }
 
   .paper {
