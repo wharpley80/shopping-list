@@ -150,34 +150,6 @@ if (isset($_REQUEST['action'])) {
 				</div>
 			</div>
 		</div>
-
-    <!--
-	  <img id="shoppingcart2" src="../img/1440454195_Shopping cart.png" width="128" height="109" alt="Shopping Cart">
-		<img id="notepad2" src="../img/1441743044_kwrite.png" width="128" height="128" alt="Notepad">
-	   
-		<div>
-			<a href="" id="newlist">Create List</a>
-		</div>
-		<div class="list">
-		<form method="POST">
-			<label for="newlist">Create List</label>
-			<input type="hidden" name="action" value="newlist">
-			<input type="text" name="newlist" id="newlist">
-			<input type="submit" name="submit" id="submit" value="Add List">
-		</form>
-		</div>
-	  <form method="POST">
-	  <div>
-	    <a href="" id="changename">Edit Username</a>
-	  </div>
-	  <div class="tog">
-	    <label for="rename">Rename</label>
-	    <input type="hidden" name="action" value="editname">
-	    <input type="text" name="rename" id="rename">
-	    <input type="submit" name="submit" id="submit" value="Rename">
-		</div>
-	  </form>
-	-->
 		<div id="info">
 	  <form method="POST" action="" class="item-form">
 			<label for="list" class="my-label">Select List</label>

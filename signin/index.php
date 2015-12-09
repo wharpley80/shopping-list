@@ -215,29 +215,6 @@ require_once(ROOT_PATH . 'inc/header.php');
 	 		</div>
 	 	</div>
 	</div>
-	<!--
-  <header>
-    <h1>Easy List Maker</h1>
-    <p>SignIn or SignUp and Start Making Lists. <br>
-    	Create as many Lists as you desire. <br>
-    	Shopping List, To Do List, Christmas List, Packing List, etc...</p>
-    <img id="notepad" src="../img/1441743044_kwrite.png" width="128" height="128" alt="Notepad">
-  </header>
-  <div id="info">
-  <form method="POST" action="" class="signin-form">
-		<input type="text" name="username" id="username" placeholder="Username">
-  <div>
-    <input type="password" name="password" id="password" placeholder="Password">
-    <input type="submit" name="signin" class="signin" value="Log In">
-  </form>
-  </div>
-	</div>
-	<img id="shoppingcart" src="../img/1440454195_Shopping cart.png" width="128" height="109" alt="1440454195 Shopping Cart">
-	<img id="suitcase" src="../img/1441743852_suitcase-br.png" width="128" height="128" alt="Suitcase">
-  <div class="newcomer">
-    <a href="../signup" id="newname">New User Click Here</a>
-  </div>
--->
 <?php
 include(ROOT_PATH . 'inc/footer.php');
 ?>

@@ -10,6 +10,18 @@ body {
   background-color: #e8e8e8;
 }
 
+h1 {
+  font-size: 70px;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+}
+
+ol {
+  float: left;
+  margin: 0;
+  text-align: left;
+}
+
 .list-page {
   background: 
     linear-gradient(
@@ -24,58 +36,10 @@ body {
   padding: 10px 0 20px 0;
 }
 
-h1 {
-  font-size: 70px;
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-}
-
 .list-name {
   font-size: 40px;
   font-family: 'Raleway', sans-serif;
   color: #fff;
-}
-
-ol {
-  float: left;
-  margin: 0;
-  text-align: left;
-}
-
-/*
-  body {
-  background: -webkit-linear-gradient(#56A0D3, #CAE1FF); /* For Safari 5.1 to 6.0 */
- /* background: -o-linear-gradient(#56A0D3, #CAE1FF); /* For Opera 11.1 to 12.0 */
-  /*background: -moz-linear-gradient(#56A0D3, #CAE1FF); /* For Firefox 3.6 to 15 */
-  /*background: linear-gradient(#56A0D3, #CAE1FF); /* Standard syntax */  
-  /*
-  background-attachment: fixed; 
-	color: white;
-	font-family: 'Lakki Reddy', cursive, sans-serif;
-	text-align: center;
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-}
-*/
-/*
-h1 {
-	font-family: 'Lakki Reddy', cursive, sans-serif;
-}
-
-h2 {
-	font-family: 'Lakki Reddy', cursive, sans-serif;
-	margin: 0;
-}
-
-h3 {
-   font-family: 'Lakki Reddy', cursive, sans-serif;
-}
-
-ol {
-	float: left;
-	margin: 0;
-	text-align: left;
 }
 
 /*****************************
@@ -157,7 +121,6 @@ a.navbar-text:hover {
   display: block;
   text-align: center;
   color: #6495ed;
-  /*color: #3a87ad;*/
 }
 
 /*****************************
@@ -253,92 +216,14 @@ select {
   background-color: #000;
   border-color: #000;
 }
-/*
-input[type=submit] {
-  background: #778899;
-}
-
-a {
-	color: #3300FF;
-}
-
-a:hover {
-  color: #000;
-}
-
-.pop {
-  cursor: default;
-  display: none;
-  margin: 0 auto;
-}
-
-.tog {
-  cursor: default;
-  display: none;
-  margin: 0 auto;
-}
-
-.list {
-  cursor: default;
-  display: none;
-  margin: 0 auto;
-}
 
 .byebye {
-  color: #778899;
-  cursor: default;
-  font-size: 0.75em;
-  text-decoration: none;
+	color: #6495ed;
+  padding-left: 10px;
 }
 
-.clear {
-  color: #778899;
-  cursor: default;
-  font-size: 1.25em;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.listname {
-	margin-bottom: 0;
-	padding: 0;
-}
-
-#return {
-  font-size: .8em;
-  margin: 20px;
-  width: 100px;
-}
-
-#notepad {
-  display: inline-block;
-}
-
-#notepad2 {
-  float: right;
-  margin: 0 15% 0 -40%;
-}
-
-#shoppingcart {
-  float: left;
-  margin: 0 -40% 0 15%;
-}
-
-#shoppingcart2 {
-  float: left;
-  margin: 0 -40% 0 15%;
-}
-
-#suitcase {
-  float: right;
-  margin: 0 15% 0 -40%;
-}
-
-.logout {
-  display: block;
-  text-align: right;
-  padding: 10px 10px 0 0;
+.byebye:hover {
+  color: #ee1289;
 }
 
 /*****************************
@@ -381,73 +266,4 @@ footer {
   .paper {
     width: 70%;
   }
-  /*
-	body { 
-		background: #56A0D3;
-		font-family: arial;
-		font-size: 0.75em;
-		}
-	
-		a {
-			font-size: 0.75em;
-		}
-		
-	img {
-		height: 60px;
-		width: 60px;
-	}
-	
-	input {
-		margin: 5px;
-		width: 7em;
-		height: 1em;
-	}
-	
-	input[type=submit] {
-	   height: 1.5em;
-	}
-	
-	.paper {
-		width: 60%;
-	}
-	
-	.clear {
-		font-size: 0.75em;
-	}
-
-  */
 }
-/*
-@media (max-width: 480px) {
-	
-	h1 {
-		font-size: 1em;
-	}
-	
-	h2 {
-		font-size: 0.9em;
-	}
-	
-	h3 {
-		font-size: 0.8em;
-	}
-	
-	p {
-		font-size: 0.75em;
-	}
-		
-	label {
-		font-family: arial;
-		font-size: 0.75em;
-	}
-	
-	#shoppingcart {
-		display: none;
-	}
-		
-	#suitcase {
-		display: none;
-	}
-	
-}
-	
