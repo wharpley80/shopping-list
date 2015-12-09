@@ -123,6 +123,13 @@ a.navbar-text:hover {
   color: #6495ed;
 }
 
+span.glyphicon {
+  font-size: inherit;
+  color: inherit;
+  display: inline;
+  padding-left: 10px
+}
+
 /*****************************
 			NOTEPAD BACKGROUND
 *****************************/

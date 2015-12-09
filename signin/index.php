@@ -131,8 +131,8 @@ require_once(ROOT_PATH . 'inc/header.php');
     				lose your list again.
     			</p>
     			<p class="lead">
-    				<a class="btn btn-default btn-md" href="#signIn" data-toggle="modal">Sign In</a>
-    				<a class="btn btn-default btn-md"	 href="#signUp" data-toggle="modal">Get Started</a>
+    				<a class="btn btn-default btn-md" href="#signIn" data-toggle="modal">Sign In<span class="glyphicon glyphicon-user"></span></a>
+    				<a class="btn btn-default btn-md"	 href="#signUp" data-toggle="modal">Get Started<span class="glyphicon glyphicon-road"></span></a>
     			</p>
 				</div>
 				<div class="col-sm-6 hidden-xs">
@@ -152,7 +152,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 				<div class="modal-body">
 					<form class="signin-form" method="POST">
 					  <div class="form-group">
-					  	<input type="text" class="form-control-sm" name="username" id="username" placeholder="Username">
+					  	<input type="text" class="form-control-sm" name="username" id="username" autofocus="autofocus" placeholder="Username">
 					  </div>
 					  <div class="form-group">
 					    <input type="password" class="form-control-sm" name="password" id="password" placeholder="Password">
@@ -173,7 +173,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 				<div class="modal-body">
 					<form class="signup-form" method="POST">
 					  <div class="form-group">
-					  	<input type="text" class="form-control-sm" name="newname" id="name" placeholder="Username">
+					  	<input type="text" class="form-control-sm" name="newname" id="name" autofocus="autofocus" placeholder="Username">
 					  </div>
 					  <div class="form-group">
 					    <input type="password" class="form-control-sm" name="new-password" id="new-password" placeholder="Password">
@@ -190,7 +190,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 	<div class="container">
 	 	<div class="row">
 	 		<div class="col-sm-4">
-	 			<b class="glyphicon glyphicon-user"></b>
+	 			<b class="glyphicon glyphicon-road"></b>
 	 			<h2>Get Started</h2>
 			 	<p>
 			 		Create an account with a Username and Password. Then make as many lists as you want. It's quick, easy, and FREE!! Takes 
@@ -198,7 +198,7 @@ require_once(ROOT_PATH . 'inc/header.php');
 			 	</p>
 	    </div>
 	    <div class="col-sm-4">
-	    	<b class="glyphicon glyphicon-th-list"></b>
+	    	<b class="glyphicon glyphicon-duplicate"></b>
 	    	<h2>Make Multiple Lists</h2>
 			 	<p>
 			 		Once you get started you can make as many lists as you want. Shopping, To Do, Goals, Christmas, Packing, Grocery, or

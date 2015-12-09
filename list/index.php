@@ -97,7 +97,7 @@ if (isset($_REQUEST['action'])) {
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<h3 class="navbar-text pull-left">Easy List Maker</h3>
-			<a href="<?php echo BASE_URL; ?>" class="navbar-text pull-right">Logout & Save</a>
+			<a href="<?php echo BASE_URL; ?>" class="navbar-text pull-right">Logout & Save<span class="glyphicon glyphicon-save"></span></a>
 		</div>
 	</div>
 	<div class="list-page">
@@ -108,9 +108,9 @@ if (isset($_REQUEST['action'])) {
 	    ?>
 	   	<p class="lead">First select or create a list. Then start adding items.</p>
 	   	<p class="lead">
-    		<a class="btn btn-default btn-sm" href="#createList" data-toggle="modal">New List</a>
-    		<a class="btn btn-default btn-sm" id="clear" href="">Clear List</a>
-    		<a class="btn btn-default btn-sm"	id="deletelist" href="">Delete List</a>
+    		<a class="btn btn-default btn-sm" href="#createList" data-toggle="modal">New List<span class="glyphicon glyphicon-pencil"></span></a>
+    		<a class="btn btn-default btn-sm" id="clear" href="">Clear List<span class="glyphicon glyphicon-erase"></span></a>
+    		<a class="btn btn-default btn-sm"	id="deletelist" href="">Delete List<span class="glyphicon glyphicon-trash"></span></a>
     	</p>
 	  </div>
 	  <div class="modal fade modal" id="createList">
