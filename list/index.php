@@ -123,7 +123,6 @@ if (isset($_REQUEST['action'])) {
 					<div class="modal-body">
 						<form class="signin-form" method="POST">
 						  <div class="form-group">
-	              <label for="newlist">List Name</label>
 	              <input type="hidden" name="action" value="newlist">
 						  	<input type="text" class="form-control-sm" name="newlist" id="newlist" autofocus="autofocus" placeholder="List Name">
 						  </div>
@@ -143,8 +142,7 @@ if (isset($_REQUEST['action'])) {
 					<div class="modal-body">
 						<form class="signin-form" method="POST">
 						  <div class="form-group">
-	              <label for="rename">Username</label>
-						  	<input type="text" class="form-control-sm" name="rename" id="rename" autofocus="autofocus" placeholder="Username">
+						  	<input type="text" class="form-control-sm" name="rename" id="rename" autofocus="autofocus" placeholder="New Username">
 						  </div>
 						  <input type="submit" name="signin" class="btn btn-primary" value="Rename">
 						</form>
@@ -187,7 +185,7 @@ if (isset($_REQUEST['action'])) {
 	    $cols = $db->prepare('SELECT DISTINCT(list) FROM grocery_item WHERE name_id = ? ORDER BY list ASC'); 
 	    $cols->bindParam(1,$userid);
 	    $cols->execute();?>
-	    <select id="return" name="list" >Select</option>
+	    <select id="return" name="list">Select</option>
 	      <option selected disabled>Select</option>
 	      <?php foreach ($cols as $col) { ?>
 	              <option value="<?php echo htmlspecialchars($col['list']); ?>" 

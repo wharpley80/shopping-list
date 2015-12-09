@@ -1,6 +1,11 @@
 /*****************************
 			MAIN
 *****************************/
+
+html {
+  height: 100%;
+}
+
 body {
   background-color: #e8e8e8;
 }
@@ -12,15 +17,11 @@ body {
       rgba(142, 109, 180, 0.92)
     ),
     url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 1800px;
   text-align: center;
   height: 100%;
   margin: 55px 0 0 0;
   padding: 10px 0 20px 0;
-}
-
-html {
-		height: 100%;
 }
 
 h1 {
@@ -33,6 +34,12 @@ h1 {
   font-size: 40px;
   font-family: 'Raleway', sans-serif;
   color: #fff;
+}
+
+ol {
+  float: left;
+  margin: 0;
+  text-align: left;
 }
 
 /*
@@ -80,6 +87,10 @@ ol {
   border-color: #000;
 }
 
+a.navbar-text:hover {
+  color: #fff;
+}
+
 /*****************************
       JUMBOTRON
 *****************************/
@@ -119,7 +130,7 @@ ol {
   border-width: 2px;
   color: #c8c8c8;
   border-color: inherit;
-  margin-right: 15px;
+  margin: 5px;
   padding: 12px 22px;
 }
 
@@ -127,6 +138,14 @@ ol {
   background-color: #fff;
   color: #957bba;
   border-color: #fff;
+}
+
+/*****************************
+      MODAL
+*****************************/
+
+.modal-dialog {
+  text-align: center;
 }
 
 /*****************************
@@ -147,7 +166,6 @@ ol {
 
 .paper {
   font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
-  width: 50%;
   height: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -174,7 +192,7 @@ ol {
   -webkit-box-shadow: 10px 10px 5px #000;
   -moz-box-shadow: 10px 10px 5px #000;
   box-shadow: 10px 10px 5px #000;
-  width: 30%;
+  width: 35%;
   height: 500px;
   overflow-y: auto;
 }
@@ -207,7 +225,6 @@ label {
 
 input {
    border-bottom-color: #778899;
-
    border-bottom-style: solid;
    border-bottom-width: 1px;
    border-left-color: #778899;
@@ -217,7 +234,6 @@ input {
    border-right-style: solid;
    border-right-width: 1px;
    border-top-color: #778899;
-
    border-top-style: solid;
    border-top-width: 1px;
    margin: 0;
@@ -349,8 +365,23 @@ footer {
 /*****************************
 			MEDIA QUERIES
 *****************************/
-/*
+
 @media (max-width: 800px) {
+
+  .jumbotron {
+    background: 
+      linear-gradient(
+        rgba(142, 109, 180, 0.95), 
+        rgba(142, 109, 180, 0.95)
+      ),
+      url('../img/15419711-Light-Grey-Wall-Stucco-Texture-Detailed-Natural-Gray-Coarse-Rustic-Textured-Background-Concrete-Copy-Stock-Photo.jpg') no-repeat;
+    background-size: 100% 1800px;
+  }
+
+  .paper {
+    width: 70%;
+  }
+  /*
 	body { 
 		background: #56A0D3;
 		font-family: arial;
@@ -383,8 +414,10 @@ footer {
 	.clear {
 		font-size: 0.75em;
 	}
-}
 
+  */
+}
+/*
 @media (max-width: 480px) {
 	
 	h1 {

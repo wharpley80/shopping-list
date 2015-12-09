@@ -7,7 +7,7 @@
 		</footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
-	  <script type="text/javascript" src="<?php echo BASE_URL; ?>inc/js/jquery.tooltipster.min.js"></script>
+	  <script src="<?php echo BASE_URL; ?>inc/js/jquery.tooltipster.min.js" type="text/javascript"></script>
     <script src="<?php echo BASE_URL; ?>inc/js/scripts.js?<?php echo time(); ?>" type="text/javascript" charset="utf-8"></script>
 		<script src="<?php echo BASE_URL; ?>inc/js/bootstrap.min.js?<?php echo time(); ?>" type="text/javascript" charset="utf-8"></script>
 		<script>
