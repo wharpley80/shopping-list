@@ -25,7 +25,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	 } else {
 		$valid_pass = "true";
 	 }
-
-		echo $valid_pass;
-
+	 echo $valid_pass;
 }

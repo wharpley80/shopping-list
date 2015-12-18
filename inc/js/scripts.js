@@ -1,4 +1,3 @@
-// New Shopper pop-up
 $(function() {
 
   // Initialize tooltipster on signin-form input/password elements
@@ -45,6 +44,9 @@ $(function() {
     errorPlacement: function (error, element) {
       $(element).tooltipster('update', $(error).text());
       $(element).tooltipster('show');
+      $('#signIn').on('hidden.bs.modal', function () {
+        $(element).tooltipster('hide');
+      });
     },
     success: function (label, element) {
       $(element).tooltipster('hide');
@@ -97,6 +99,9 @@ $(function() {
     errorPlacement: function (error, element) {
       $(element).tooltipster('update', $(error).text());
       $(element).tooltipster('show');
+      $('#signUp').on('hidden.bs.modal', function () {
+        $(element).tooltipster('hide');
+      });
     },
     success: function (label, element) {
       $(element).tooltipster('hide');
